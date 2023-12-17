@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="Widget_css/widget_styles.css">
+    <script type="text/javascript" src="Widget_js/widget_scripts.js"></script>
+
+
+  </head>
+  <body onload="widget_load(),widget_custom()">
+    <div style="position:absolute;height:100%;width:100%;display:flex;align-items: center;justify-content: center;">
+      YOUR WEBSITE HERE.
+    </div>
+    <div id="widget_tab_box">
+      <div id="widget_tab">
+        <div id="jk" style="position:relative;font-size:150%;top:1.5rem;left:1rem;width:10rem;color:white;">TIME ZONES</div>
+        <img id="widget_tab_add" src="Widget_images/White/button_add.png" alt="" onclick="widget_fullscreen()">
+        <hr style="color:grey;">
+        <span id="widget_tab_list">
+            <div id="widget_empty"><p><img id="widget_empty_doge" src="Widget_images/White/image_empty.jpg" alt=""></p><p>Wow, such empty</p></div>
+            <div id="widget_time1"><p id="widget_zone">Melbourne<span id="widget_t1"></span><span id="widget_custom1"></span></p><p><span id="widget_offset1"></span><span id="widget_date1"></span></p><p id="widget_meetwin"> Ideal meeting window <span id="w1"></span> </p><hr> </div>
+            <div id="widget_time2"><p id="widget_zone">Shanghai<span id="widget_t2"></span><span id="widget_custom2"></span> </p><p><span id="widget_offset2"></span><span id="widget_date2"></span></p><p id="widget_meetwin"> Ideal meeting window <span id="w2"></span> </p><hr> </div>
+            <div id="widget_time3"><p id="widget_zone">Hong Kong<span id="widget_t3"></span><span id="widget_custom3"></span> </p><p><span id="widget_offset3"></span><span id="widget_date3"></span></p><p id="widget_meetwin"> Ideal meeting window <span id="w3"></span> </p><hr> </div>
+            <div id="widget_time4"><p id="widget_zone">India<span id="widget_t4"></span><span id="widget_custom4"></span> </p><p><span id="widget_offset4"></span><span id="widget_date4"></span></p><p id="widget_meetwin"> Ideal meeting window <span id="w4"></span> </p><hr> </div>
+            <div id="widget_time5"><p id="widget_zone">London<span id="widget_t5"></span><span id="widget_custom5"></span> </p><p><span id="widget_offset5"></span><span id="widget_date5"></span></p><p id="widget_meetwin"> Ideal meeting window <span id="w5"></span> </p><hr> </div>
+            <div id="widget_time6"><p id="widget_zone">Eastern Time<span id="widget_t6"></span><span id="widget_custom6"></span> </p><p><span id="widget_offset6"></span><span id="widget_date6"></span></p><p id="widget_meetwin"> Ideal meeting window <span id="w6"></span> </p><hr> </div>
+            <div id="widget_time7"><p id="widget_zone">Pacific Time<span id="widget_t7"></span><span id="widget_custom7"></span> </p><p><span id="widget_offset7"></span><span id="widget_date7"></span></p><p id="widget_meetwin"> Ideal meeting window <span id="w7"></span> </p><hr> </div>
+        </span>
+      </div>
+    </div>
+    <div id="widget_settings3">
+      <img id="widget_up_white_hr0" src="Widget_images/White/button_arrow2.png"  onclick="widget_start(+1)" alt="">
+      <img id="widget_up_white_m10" src="Widget_images/White/button_arrow2.png"  onclick="widget_start(+2)" alt="">
+      <img id="widget_up_white_m20" src="Widget_images/White/button_arrow2.png"  onclick="widget_start(+3)" alt="">
+      <img id="widget_up_white_mr0" src="Widget_images/White/button_arrow2.png"  onclick="widget_start(0)" alt="">
+      <img id="widget_down_white_hr0" src="Widget_images/White/button_arrow2.png"  onclick="widget_start(-1)" alt="">
+      <img id="widget_down_white_m10" src="Widget_images/White/button_arrow2.png"  onclick="widget_start(-2)" alt="">
+      <img id="widget_down_white_m20" src="Widget_images/White/button_arrow2.png"  onclick="widget_start(-3)" alt="">
+      <img id="widget_down_white_mr0"  src="Widget_images/White/button_arrow2.png"  onclick="widget_start(0)" alt="">
+      <p id="widget_heading" style="top:.5rem;font-size:1.7rem;">Meeting start time</p>
+      <hr>
+        <p id="widget_start_time" style="top:2rem;font-size:3rem"></p>
+    </div>
+    <div id="widget_settings1">
+      <p id="widget_heading" style="top:3.5rem;font-size:3rem;">Settings</p>
+      <!--<p id="widget_heading" style="top:.5rem;font-size:1.7rem;">Themes</p>
+      <hr>-->
+
+    </div>
+    <div id="widget_settings2">
+      <img id="widget_up_white_hr1" src="Widget_images/White/button_arrow2.png"  onclick="widget_end(+1)" alt="">
+      <img id="widget_up_white_m11" src="Widget_images/White/button_arrow2.png"  onclick="widget_end(+2)" alt="">
+      <img id="widget_up_white_m21" src="Widget_images/White/button_arrow2.png"  onclick="widget_end(+3)" alt="">
+      <img id="widget_up_white_mr1" src="Widget_images/White/button_arrow2.png"  onclick="widget_end(0)" alt="">
+      <img id="widget_down_white_hr1" src="Widget_images/White/button_arrow2.png"  onclick="widget_end(-1)" alt="">
+      <img id="widget_down_white_m11" src="Widget_images/White/button_arrow2.png"  onclick="widget_end(-2)" alt="">
+      <img id="widget_down_white_m21" src="Widget_images/White/button_arrow2.png"  onclick="widget_end(-3)" alt="">
+      <img id="widget_down_white_mr1"  src="Widget_images/White/button_arrow2.png"  onclick="widget_end(0)" alt="">
+      <p id="widget_heading" style="top:.5rem;font-size:1.7rem;">Meeting end time</p>
+      <hr>
+        <p id="widget_end_time" style="top:2rem;font-size:3rem"></p>
+    </div>
+
+    <div id="widget_settings4">
+      <p id="widget_heading" style="top:.5rem;font-size:1.7rem;">Time format</p>
+      <hr>
+      <p><span id="widget_12hr" style="top:2rem;right:1.5rem;" onclick="widget_time_format(0)">12hr</span>
+      <span id="widget_line" style="top:2rem;font-size:3rem">|</span>
+      <span id="widget_24hr" style="top:2rem;left:1.5rem;" onclick="widget_time_format(1)">24hr</span></p>
+    </div>
+    <div id="widget_settings5">
+      <p id="widget_heading" style="top:.5rem;font-size:1.7rem;">Date format</p>
+      <hr>
+      <p style="position:absolute;top:6rem;width:15rem;left:1.8rem;">
+        <span id="widget_dateformats1" style="position:absolute;left:.5rem;" onclick="widget_date_format(0)">DD / MM / YY</span>
+        <span id="widget_dateformats2" style="position:absolute;right:.5rem;" onclick="widget_date_format(1)">MM/ DD / YY</span></p>
+      <p style="position:absolute;top:9rem;width:15rem;left:1.8rem;">
+        <span id="widget_dateformats3" style="position:absolute;left:0;" onclick="widget_date_format(2)">DD MONTH, YYYY</span>
+        <span id="widget_dateformats4" style="position:absolute;right:0;" onclick="widget_date_format(3)">MONTH DD, YYYY</span>
+      </p>
+    </div>
+    <div id="widget_main">
+      <p id="widget_main_zone"></p>
+      <hr>
+      <p id="widget_main_time"></p>
+      <p id="widget_main_day"></p>
+      <p id="widget_main_date"></p>
+      <img id="widget_main_button_white" src="Widget_images/White/button_main.png" alt="" onclick="widget_main_active()">
+      <img id="widget_arrow1_white" src="Widget_images/White/button_arrow1.png" alt="" onclick="widget_tab_active()">
+      <span id="widget_custom_button_white" onclick="widget_extend()"><img src="Widget_images/White/button_clock.png" style="position:absolute;height:15%;right:.6rem;bottom:.5rem;"alt=""><img src="Widget_images/White/button_question.png" style="position:absolute;height:8%;right:0;bottom:1.5rem;"alt=""></span>
+      <img id="widget_settings_white" src="Widget_images/White/button_settings.png" style="position:absolute;height:15%;left:.6rem;bottom:.5rem;" alt="" onclick="widget_settings_active()">
+    </div>
+    <!--<img id="widget_main_button_black" src="Widget_images/Black/button_main.png" alt="">
+    <img id="widget_main_button_red" src="Widget_images/Red/button_main.png" alt="">-->
+    <div id="widget_ext">
+      <img id="widget_close_white" src="Widget_images/White/button_close.png" onclick="widget_extend_close()" alt="">
+      <img id="widget_up_white_hr2" src="Widget_images/White/button_arrow2.png"  onclick="widget_custom(+1)" alt="">
+      <img id="widget_up_white_m12" src="Widget_images/White/button_arrow2.png"  onclick="widget_custom(+2)" alt="">
+      <img id="widget_up_white_m22" src="Widget_images/White/button_arrow2.png"  onclick="widget_custom(+3)" alt="">
+      <img id="widget_up_white_mr2" src="Widget_images/White/button_arrow2.png"  onclick="widget_custom(0)" alt="">
+      <img id="widget_down_white_hr2" src="Widget_images/White/button_arrow2.png"  onclick="widget_custom(-1)" alt="">
+      <img id="widget_down_white_m12" src="Widget_images/White/button_arrow2.png"  onclick="widget_custom(-2)" alt="">
+      <img id="widget_down_white_m22" src="Widget_images/White/button_arrow2.png"  onclick="widget_custom(-3)" alt="">
+      <img id="widget_down_white_mr2"  src="Widget_images/White/button_arrow2.png"  onclick="widget_custom(0)" alt="">
+      <p id="widget_heading" style="top:.5rem;font-size:1.7rem;">Custom Time</p>
+      <hr>
+        <p id="widget_custom_time" style="top:2rem;font-size:3rem"></p>
+    </div>
+    <div id="widget_fullscreen" style="text-align:center;">
+      <img id="widget_addall" src="Widget_images/White/button_logo.png" alt="" onclick="widget_all_action()">
+      <img id="widget_world" src="Widget_images/White/image_world.png" alt=""  onmouseover="widget_add_zs(-1)">
+      <div id="widget_button_pin7" style="position:absolute;left:10rem;top:17.3rem;" onmouseover="widget_add_zs(6)" ondblclick="widget_pin(6)" onclick="widget_add(6)"><img id="widget_p6" src="Widget_images/White/button_pin.png"alt=""><img id="widget_pw6" src="Widget_images/White/button_pin1.png"alt=""><img src="Widget_images/White/button_logo.png" style="position:absolute;height:19%;left:.78rem;top:.1rem;"alt=""></span></div>
+      <div id="widget_button_pin6" style="position:absolute;left:18.5rem;top:19.3rem;" onmouseover="widget_add_zs(5)" ondblclick="widget_pin(5)" onclick="widget_add(5)"><img id="widget_p5" src="Widget_images/White/button_pin.png"alt=""><img id="widget_pw5" src="Widget_images/White/button_pin1.png"alt=""><img src="Widget_images/White/button_logo.png" style="position:absolute;height:19%;left:.78rem;top:.1rem;"alt=""></span></div>
+      <div id="widget_button_pin5" style="position:absolute;left:33.8rem;top:16.5rem;" onmouseover="widget_add_zs(4)" ondblclick="widget_pin(4)" onclick="widget_add(4)"><img id="widget_p4" src="Widget_images/White/button_pin.png"alt=""><img id="widget_pw4" src="Widget_images/White/button_pin1.png"alt=""><img src="Widget_images/White/button_logo.png" style="position:absolute;height:19%;left:.78rem;top:.1rem;"alt=""></span></div>
+      <div id="widget_button_pin4" style="position:absolute;left:49rem;top:23.8rem;" onmouseover="widget_add_zs(3)" ondblclick="widget_pin(3)" onclick="widget_add(3)"><img id="widget_p3" src="Widget_images/White/button_pin.png" alt=""><img id="widget_pw3" src="Widget_images/White/button_pin1.png"alt=""><img src="Widget_images/White/button_logo.png" style="position:absolute;height:19%;left:.78rem;top:.1rem;"alt=""></span></div>
+      <div id="widget_button_pin3" style="position:absolute;left:55rem;top:23.8rem;" onmouseover="widget_add_zs(2)" ondblclick="widget_pin(2)" onclick="widget_add(2)"><img id="widget_p2" src="Widget_images/White/button_pin.png" alt=""><img id="widget_pw2" src="Widget_images/White/button_pin1.png"alt=""><img src="Widget_images/White/button_logo.png" style="position:absolute;height:19%;left:.78rem;top:.1rem;"alt=""></span></div>
+      <div id="widget_button_pin2" style="position:absolute;left:57.4rem;top:21.8rem;" onmouseover="widget_add_zs(1)" ondblclick="widget_pin(1)" onclick="widget_add(1)"><img id="widget_p1" src="Widget_images/White/button_pin.png"alt=""><img id="widget_pw1" src="Widget_images/White/button_pin1.png"alt=""><img src="Widget_images/White/button_logo.png" style="position:absolute;height:19%;left:.78rem;top:.1rem;"alt=""></span></div>
+      <div id="widget_button_pin1" style="position:absolute;left:62rem;top:36.1rem;" onmouseover="widget_add_zs(0)" ondblclick="widget_pin(0)" onclick="widget_add(0)"><img id="widget_p0" src="Widget_images/White/button_pin.png" alt=""><img id="widget_pw0" src="Widget_images/White/button_pin1.png"alt=""><img src="Widget_images/White/button_logo.png" style="position:absolute;height:19%;left:.78rem;top:.1rem;"alt=""></span></div>
+      <div id="widget_zs">
+        <p id="widget_zs_zone"></p>
+        <hr>
+        <p id="widget_zs_time" style="position:relative; top:2rem;font-size:3rem transition:.5s"></p>
+      </div>
+    </div>
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
+  </body>
+</html>
